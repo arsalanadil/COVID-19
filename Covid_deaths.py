@@ -66,6 +66,7 @@ italy_d = deathsSinceOnset('Italy')
 us_d = deathsSinceOnset('US')
 sk_d = deathsSinceOnset('Korea, South')
 iran_d = deathsSinceOnset('Iran')
+japan_d= deathsSinceOnset('Japan')
 
 
 #plt.plot( 
@@ -93,7 +94,7 @@ plt.plot(
 
 plt.plot( 
         np.arange(italy_d.shape[0]), 
-        np.divide(italy_d,cases.italypop_65 )*100)
+        np.divide(italy_d,cases.italypop )*100)
 
 plt.plot( 
         np.arange(us_d.shape[0]-30), 
@@ -103,7 +104,18 @@ plt.plot(
         np.arange(pk_d.shape[0]), 
         np.divide(pk_d,cases.pkpop_65 )*100)
 
+plt.plot( 
+        np.arange(italy_d.shape[0]), 
+        np.divide(italy_d,cases.italypop_65 )*100)
 
+plt.plot( 
+        np.arange(iran_d.shape[0]), 
+        np.divide(iran_d,cases.casesSinceOnset('Iran') )*100)
+
+
+plt.plot( 
+        np.arange(japan_d.shape[0]), 
+        np.divide(japan_d,cases.casesSinceOnset('Japan') )*100)
 
 #plt.plot(np.arange(us.shape[0]-30),us[30:]/uspop*10**5,
 #         np.arange(china.shape[0]),china/chinapop*10**5,

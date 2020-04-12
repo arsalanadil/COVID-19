@@ -62,6 +62,7 @@ pkpop = 207.774 * 10**6
 chinapop = 1.386 * 10**9
 italypop = 60.48 * 10**6
 uspop = 327.2 * 10**6
+japanpop = 126.8 * 10**6
 iranpop = 81.16 * 10**6
 skpop = 51.47 * 10**6
 indiapop = 1.339 * 10**9
@@ -79,12 +80,13 @@ sk = casesSinceOnset('Korea, South')
 uk = casesSinceOnset('United Kingdom')
 iran = casesSinceOnset('Iran')
 india = casesSinceOnset('India')
+japan = casesSinceOnset('Japan')
 
 #plt.plot(np.arange(pk.shape[0]),pk/pkpop * 10**6,
 #         np.arange(30), italy[0:30]/italypop * 10**6 )
 
 plt.plot(np.arange(pk.shape[0]),pk/pkpop * 10**6,
-         np.arange(30), italy[0:30]/italypop * 10**6 )
+         np.arange(japan.shape[0]), japan/japanpop * 10**6 )
 
 plt.plot(np.arange(sk.shape[0]), sk/skpop * 10**6,
          np.arange(pk.shape[0]),pk/pkpop * 10**6)
